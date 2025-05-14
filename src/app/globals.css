@@ -1,0 +1,161 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Light Theme: White/Off-white background, Dark text, Blue accents */
+    --background: 0 0% 100%; /* White */
+    --foreground: 0 0% 5%; /* Near Black */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 0 0% 5%; /* Near Black */
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 0 0% 5%; /* Near Black */
+    
+    --primary: 218 96% 27%; /* User's Blue: #033487 */
+    --primary-foreground: 0 0% 98%; /* White text on primary blue */
+    
+    --secondary: 219 80% 94%; /* Very light tint derived from #000C1F's hue */
+    --secondary-foreground: 218 96% 27%; /* Primary blue text on light secondary */
+    
+    --muted: 0 0% 95%; /* Light gray for muted elements */
+    --muted-foreground: 0 0% 40%; /* Medium gray text */
+    
+    --accent: 219 100% 6%; /* New Accent: #000C1F (was 196 100% 40% - Teal) */
+    --accent-foreground: 0 0% 98%; /* White text on accent */
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 90%; /* Light gray border */
+    --input: 0 0% 90%; /* Light gray input border */
+    --ring: 218 96% 35%; /* Slightly lighter primary blue for focus rings */
+
+    /* Chart Colors - Light Theme */
+    --chart-1: 218 96% 35%; 
+    --chart-2: 210 80% 50%; 
+    --chart-3: 218 60% 65%;
+    --chart-4: 210 90% 45%; 
+    --chart-5: 0 0% 60%; /* Neutral Gray */
+
+    /* Sidebar Colors - Light Theme */
+    --sidebar-background: 0 0% 97%; 
+    --sidebar-foreground: 0 0% 10%; 
+    --sidebar-primary: 218 96% 27%; 
+    --sidebar-primary-foreground: 0 0% 98%; 
+    --sidebar-accent: 218 80% 92%; 
+    --sidebar-accent-foreground: 218 96% 27%; 
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 218 96% 35%;
+    
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark Theme: Black/Near-black background, White/Light text, Brighter Blue/Teal accents */
+    --background: 0 0% 3%; /* Near Black */
+    --foreground: 0 0% 95%; /* Light gray / Off-white */
+    --card: 0 0% 6%; /* Slightly off-black for cards */
+    --card-foreground: 0 0% 95%; /* Light gray / Off-white */
+    --popover: 0 0% 3%; /* Near Black for popovers */
+    --popover-foreground: 0 0% 95%; /* Light gray / Off-white */
+
+    --primary: 218 90% 55%; /* Brighter version of user's blue for dark mode */
+    --primary-foreground: 0 0% 98%; /* White text on primary blue */
+
+    --secondary: 219 100% 6%; /* #000C1F */
+    --secondary-foreground: 0 0% 90%; /* Light text on dark blue secondary */
+
+    --muted: 0 0% 12%; /* Dark gray for muted elements */
+    --muted-foreground: 0 0% 60%; /* Softer gray text */
+
+    --accent: 219 100% 6%; /* New Accent: #000C1F (was 196 100% 45% - Brighter Teal) */
+    --accent-foreground: 0 0% 98%; /* White text on accent */
+    
+    --destructive: 0 70% 50%; 
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 15%; /* Dark gray border, subtly visible */
+    --input: 0 0% 15%; /* Dark gray input border */
+    --ring: 218 90% 60%; /* Brighter primary blue for focus rings (was 196 90% 50% - Teal based) */
+
+    /* Chart Colors - Dark Theme */
+    --chart-1: 218 96% 60%;
+    --chart-2: 210 80% 65%; 
+    --chart-3: 218 60% 80%;
+    --chart-4: 210 90% 65%;
+    --chart-5: 0 0% 75%; /* Light Neutral Gray */
+
+    /* Sidebar Colors - Dark Theme */
+    --sidebar-background: 0 0% 5%; 
+    --sidebar-foreground: 0 0% 90%; 
+    --sidebar-primary: 218 90% 55%; 
+    --sidebar-primary-foreground: 0 0% 98%; 
+    --sidebar-accent: 218 80% 15%; 
+    --sidebar-accent-foreground: 0 0% 98%; 
+    --sidebar-border: 0 0% 12%;
+    --sidebar-ring: 218 90% 60%; /* Updated to match main ring color */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero Section Rotating Squares Animations */
+@keyframes hero-rotate-smooth {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes hero-rotate-smooth-reverse {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-hero-spin-1 {
+  animation: hero-rotate-smooth 25s linear infinite;
+}
+
+.animate-hero-spin-2 {
+  animation: hero-rotate-smooth-reverse 20s linear infinite;
+}
+
+.animate-hero-spin-3 {
+  animation: hero-rotate-smooth 18s linear infinite;
+}
+    
+
+    
