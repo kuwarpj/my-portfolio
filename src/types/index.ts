@@ -1,4 +1,4 @@
-import type { LucideIcon } from 'lucide-react';
+import type { LucideIcon } from "lucide-react";
 
 export interface NavItem {
   label: string;
@@ -41,11 +41,12 @@ export interface ProjectItem {
   title: string;
   description: string;
   technologies: string[];
-  imageUrl: string;
+  imageUrl?: string;
+  videoUrl?: string; 
+  dataAiHint?: string; 
   liveUrl?: string;
   repoUrl?: string;
   detailedDescription?: string[];
-  dataAiHint?: string;
 }
 
 export interface SkillCategory {
