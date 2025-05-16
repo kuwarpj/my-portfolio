@@ -30,13 +30,13 @@ export function HeroSection() {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild className="shadow-lg transform hover:scale-105 transition-transform border-primary/50 hover:bg-primary/5 hover:border-primary">
-                {/* Replace # with actual resume link */}
+              
                 <Link href="#"> 
                   Download CV <Download className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>
-            {/* Social Links */}
+           
             <div className="flex flex-row gap-3 justify-center md:justify-start">
               {portfolioData.socialLinks.map((socialLink) => (
                 <Button
@@ -102,7 +102,7 @@ export function HeroSection() {
                 height={280} 
                 priority
                 className="rounded-full mx-auto shadow-2xl relative z-10 aspect-square object-cover"
-                data-ai-hint="professional portrait"
+                // data-ai-hint="professional portrait"
               />
             </div>
           )}

@@ -25,7 +25,7 @@ export function SectionWrapper({
   return (
     <section
       id={id}
-      className={cn('py-16 md:py-24 scroll-mt-20', className)} // scroll-mt-20 for fixed header offset
+      className={cn('py-16 md:py-24 scroll-mt-20', className)} 
       {...props}
     >
       <div className={cn('container mx-auto px-4 sm:px-6 lg:px-8', contentClassName)}>

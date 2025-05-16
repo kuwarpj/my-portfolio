@@ -7,16 +7,16 @@ export function SummarySection() {
   const { name } = portfolioData.hero; // For alt text
 
   return (
-    <SectionWrapper id="summary" title={title} className="bg-gradient-to-b from-secondary font-[800] to-background">
+    <SectionWrapper id="summary" title={title} className="bg-gradient-to-b font-[400] from-secondary  to-background">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-        {/* Image Column - Appears first on mobile */}
+       
         <div
           className="relative group animate-fadeInUp"
           style={{ animationDelay: "0.1s" }}
         >
           <div className="aspect-square max-w-sm mx-auto md:max-w-md shadow-2xl rounded-xl overflow-hidden">
             <Image
-              src="https://placehold.co/500x500.png" // Placeholder image
+              src="/projects/summary1.png" 
               alt={`A glimpse of ${name}'s workspace or persona`}
               width={500}
               height={500}
@@ -24,7 +24,7 @@ export function SummarySection() {
               data-ai-hint="professional workspace"
             />
           </div>
-          {/* Subtle decorative elements for desktop */}
+          
           <div 
             className="hidden md:block absolute -bottom-5 -right-5 w-20 h-20 bg-accent/15 rounded-full -z-10 transform transition-transform duration-300 group-hover:scale-110"
             aria-hidden="true"
@@ -35,7 +35,6 @@ export function SummarySection() {
           ></div>
         </div>
 
-        {/* Text Content Column */}
         <div
           className="space-y-6 text-center md:text-left animate-fadeInUp"
           style={{ animationDelay: "0.3s" }}
@@ -43,7 +42,7 @@ export function SummarySection() {
           {content.map((paragraph, index) => (
             <p
               key={index}
-              className="text-lg text-foreground/90 leading-relaxed" // Slightly softer text color for readability
+              className="text-lg text-foreground/90 leading-relaxed" 
             >
               {paragraph}
             </p>

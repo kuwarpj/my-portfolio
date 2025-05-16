@@ -37,7 +37,7 @@ export const portfolioData: PortfolioData = {
       label: "View My Work",
       href: "#projects",
     },
-    avatarUrl: "https://placehold.co/400x400.png",
+    avatarUrl: "/projects/hero.png",
   },
   summary: {
     title: "About Me",
